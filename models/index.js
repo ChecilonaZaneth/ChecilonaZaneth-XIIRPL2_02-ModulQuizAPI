@@ -11,13 +11,13 @@ const sequelize = new Sequelize(
             max: dbConfig.pool.max,
             min: dbConfig.pool.min,
             acquire: dbConfig.pool.acquire,
-            idle: dbConfig.pool.idle
+            idle: dbConfig.pool.idle,
         },
     });
 const db = {};
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
-//define semua models yang ada pada aplikasi
+//define all models on app
 db.quizzes = require('./quiz')(sequelize, Sequelize);
 module.exports = db;

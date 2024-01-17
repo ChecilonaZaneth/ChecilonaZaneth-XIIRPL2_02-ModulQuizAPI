@@ -1,3 +1,5 @@
+const { Sequelize } = require("sequelize");
+
 module.exports = (sequelize, Sequelize) => {
     const Quiz = sequelize.define('quiz', {
         quiz: {
